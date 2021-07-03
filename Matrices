@@ -1,0 +1,352 @@
+a=20
+
+a =
+
+    20
+
+a=30
+
+a =
+
+    30
+
+A=30
+
+A =
+
+    30
+
+12=30
+ 12=30
+   
+{Error: Incorrect use of '=' operator. To assign a value to a variable, use '='. To compare values for
+equality, use '=='.
+} 
+velocidad1=3.30
+
+velocidad1 =
+
+    3.3000
+
+clc
+A=[1 2 3. 4 5 6]
+
+A =
+
+     1     2     3     4     5     6
+
+A=[1 2 3;4 5 6]
+
+A =
+
+     1     2     3
+     4     5     6
+
+A=[1 2 3;4 5 ]
+{Dimensions of arrays being concatenated are not consistent.
+} 
+A=[1 2 3, 4 5 6]
+
+A =
+
+     1     2     3     4     5     6
+
+B=[2 5 6; 1,3,0]
+
+B =
+
+     2     5     6
+     1     3     0
+
+A+B
+{Matrix dimensions must agree.
+} 
+A=[1 2 3; 4 5 6]
+
+A =
+
+     1     2     3
+     4     5     6
+
+A+B
+
+ans =
+
+     3     7     9
+     5     8     6
+
+C=[1 2 3]
+
+C =
+
+     1     2     3
+
+D=[1;2;3]
+
+D =
+
+     1
+     2
+     3
+
+A
+
+A =
+
+     1     2     3
+     4     5     6
+
+B
+
+B =
+
+     2     5     6
+     1     3     0
+
+B' %' el apostrofe hace la transpuesta de la matriz
+
+ans =
+
+     2     1
+     5     3
+     6     0
+
+A*B'
+
+ans =
+
+    30     7
+    69    19
+
+Respuesta1=A*B'
+
+Respuesta1 =
+
+    30     7
+    69    19
+
+2*Respuesta1
+
+ans =
+
+    60    14
+   138    38
+
+det(Respuesta1)
+
+ans =
+
+   87.0000
+
+det(Respuesta1) %calcula el determinante de la matriz respuesta
+
+ans =
+
+   87.0000
+
+inv(Respuesta1) %calcula la inversa de la matriz Respuesta
+
+ans =
+
+    0.2184   -0.0805
+   -0.7931    0.3448
+
+Respuesta1^(-1) %otra forma de calcular la inversa de la matriz respuesta
+
+ans =
+
+    0.2184   -0.0805
+   -0.7931    0.3448
+
+s=[30 60 -3: 6 -2 0; 1 1 -1]
+{Dimensions of arrays being concatenated are not consistent.
+} 
+s=[30 60 -3; 6 -2 0; 1 1 -1]
+
+s =
+
+    30    60    -3
+     6    -2     0
+     1     1    -1
+
+b=[15;32;60]
+
+b =
+
+    15
+    32
+    60
+
+sol=imv(s)*b
+{Undefined function or variable 'imv'.
+} 
+sol=inv(s)*b
+
+sol =
+
+    3.7727
+   -4.6818
+  -60.9091
+
+clc
+s(2,3) %posición (fila, columna)
+
+ans =
+
+     0
+
+s(2,:) %(fila, todas las columnas)
+
+ans =
+
+     6    -2     0
+
+s(:,3)
+
+ans =
+
+    -3
+     0
+    -1
+
+s(1,1)=50
+
+s =
+
+    50    60    -3
+     6    -2     0
+     1     1    -1
+
+s(1,1)=50 %cambia el valor en la posición especificada
+
+s =
+
+    50    60    -3
+     6    -2     0
+     1     1    -1
+
+s(:,2:3)
+
+ans =
+
+    60    -3
+    -2     0
+     1    -1
+
+s(2:3,2:3)
+
+ans =
+
+    -2     0
+     1    -1
+
+s(2:3,3:2)
+
+ans =
+
+  2×0 empty <a href="matlab:helpPopup double" style="font-weight:bold">double</a> matrix
+
+s(2:3,2:3)
+
+ans =
+
+    -2     0
+     1    -1
+
+s(3:2,2:3)
+
+ans =
+
+  0×2 empty <a href="matlab:helpPopup double" style="font-weight:bold">double</a> matrix
+
+s(2:3,1:2)
+
+ans =
+
+     6    -2
+     1     1
+
+ones(3) %matriz de 3x3 de 1
+
+ans =
+
+     1     1     1
+     1     1     1
+     1     1     1
+
+ones(2,3) %genera una matriz de 2x3 de 1
+
+ans =
+
+     1     1     1
+     1     1     1
+
+2*ones(3,2)
+
+ans =
+
+     2     2
+     2     2
+     2     2
+
+zeros(2) %matriz 2x2 de 0's
+
+ans =
+
+     0     0
+     0     0
+
+zeros(2,1) %matriz 2x1 de 0's
+
+ans =
+
+     0
+     0
+
+eye(3) %matriz identidad de 3x3
+
+ans =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+eye(3,2) %matriz identidad de 3x2
+
+ans =
+
+     1     0
+     0     1
+     0     0
+
+eye(4) %matriz identidad de 3x2
+
+ans =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+M1=[3 2; 4 1]
+
+M1 =
+
+     3     2
+     4     1
+
+M2=[23;24]
+
+M2 =
+
+    23
+    24
+
+Capitan=inv(M1)*M2
+
+Capitan =
+
+     5
+     4
+
+diary off
